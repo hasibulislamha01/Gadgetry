@@ -32,8 +32,14 @@ const Navbar = () => {
             inactiveClass: 'text-gray-400'
         },
         {
-            title: 'test',
-            link: '/blos',
+            title: 'Login',
+            link: '/login',
+            activeClass: 'text-white',
+            inactiveClass: 'text-gray-400'
+        },
+        {
+            title: 'Register',
+            link: '/register',
             activeClass: 'text-white',
             inactiveClass: 'text-gray-400'
         },
@@ -44,7 +50,7 @@ const Navbar = () => {
         <div className="">
 
             {/* horizontal navbar */}
-            <div className="bg-slate-800 px-6">
+            <div className="bg-slate-800 px-6 sticky">
                 <div className="container mx-auto flex items-center justify-end space-x-6 h-[60px]">
                     <NavLink to='/' className='text-xl text-[#FF0000] mr-auto'>Gadgetry</NavLink>
                     {
