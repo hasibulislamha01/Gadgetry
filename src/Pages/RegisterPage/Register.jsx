@@ -1,18 +1,48 @@
 import { useForm } from "react-hook-form";
+import useAuth from "../../CustomHooks/useAuth";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
+    const { createUser } = useAuth()
+    const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm()
+    const [firebaseErr, setFirebaseErr] = useState(null)
 
-    const handleRegister = () => {
-        console.log('register in');
+    const handleRegister = (data) => {
+
+        setFirebaseErr(null)
+        console.log(data)
+        const email = data.email
+        const password = data.pass
+
+        createUser(email, password)
+            .then(res => {
+                if (res?.user) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "You have Registered!",
+                        icon: "success"
+                    });
+                    navigate('/')
+                }
+            }).catch(err => {
+                console.error(err.message)
+                setFirebaseErr(err.message)
+            })
     }
 
     return (
         <div className="pt-2 lg:pt-12">
             <h1 className="heading">Register</h1>
 
-            <form onSubmit={handleSubmit(handleRegister)} className="mt-10 flex flex-col items-center justify-center gap-6">
+            {
+                firebaseErr && <p className="mt-10 text-red-500 text-center font-medium">{firebaseErr}</p>
+            }
+
+            <form onSubmit={handleSubmit(handleRegister)} className="mt-5 flex flex-col items-center justify-center gap-6">
 
                 <div className="form-control space-y-3">
                     <label htmlFor="">

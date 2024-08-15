@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import axios from "axios";
 
 
-const AuthContext = createContext(null)
+export const AuthContext = createContext(null)
 
 const AuthProvider = ({ children }) => {
 
