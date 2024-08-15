@@ -18,12 +18,7 @@ const Navbar = () => {
 
 
     const navigationMenues = [
-        {
-            title: 'Gadgetry',
-            link: '/',
-            activeClass: 'mr-auto  text-white text-lg md:text-xl',
-            inactiveClass: 'mr-auto text-white text-lg md:text-xl'
-        },
+       
         {
             title: 'Home',
             link: '/',
@@ -55,6 +50,7 @@ const Navbar = () => {
                     {
                         navigationMenues?.map(item =>
                             <NavLink
+                                key={item?.link}
                                 to={item.link}
                                 className={({ isActive }) => isActive ? `${item.activeClass}  hidden md:inline-flex` : `${item.inactiveClass}  hidden md:inline-flex`}
                             >{item.title}</NavLink>
@@ -75,6 +71,7 @@ const Navbar = () => {
                     {
                         navigationMenues?.map(item =>
                             <NavLink
+                                key={item.link}
                                 to={item.link}
                                 className={({ isActive }) => isActive ? `${item.activeClass}  w-full  px-8 py-3 hover:bg-slate-800` : `${item.inactiveClass} w-full py-3 px-8 hover:bg-slate-800`}
                             >{item.title}</NavLink>
