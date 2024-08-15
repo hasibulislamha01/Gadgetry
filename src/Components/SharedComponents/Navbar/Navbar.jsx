@@ -7,23 +7,20 @@ const Navbar = () => {
 
     const navItems =
         <>
-            <NavLink to='/' end className={({ isActive }) => isActive ? 'text-black border-b-2 border-black' : 'text-gray-500 border-gray-500'}>Home</NavLink>
+            <NavLink to='/' className={({ isActive }) => isActive ? 'mr-auto  text-white text-2xl' : 'mr-auto text-2xl'}>Name</NavLink>
 
-            <NavLink to='/blogs' end className={({ isActive }) => isActive ? 'text-black border-b-2 border-black' : 'text-gray-500 border-gray-500'}>Blogs</NavLink>
+            <NavLink to='/' className={({ isActive }) => isActive ? 'text-white' : 'text-gray-400 '}>Home</NavLink>
+            <NavLink to='/blogs' className={({ isActive }) => isActive ? 'text-white' : 'text-gray-400'}>Blogs</NavLink>
 
 
         </>
     return (
-        <div className="w-full h-[50px] fixed z-50 flex items-center justify-center">
-            <div className="navbar container mx-auto min-w-12  flex justify-center">
+        <div className="">
 
-                <div className="navbar-start">
-                    <a className="font-semibold text-xl">Hasibul Islam</a>
-                </div>
-
-                <div className="navbar-end items-center gap-4 hidden lg:inline-flex font-medium">
+            {/* horizontal navbar */}
+            <div className="bg-slate-800">
+                <div className="container mx-auto flex items-center justify-end space-x-6 h-[60px]">
                     {navItems}
-
                 </div>
             </div>
         </div>
