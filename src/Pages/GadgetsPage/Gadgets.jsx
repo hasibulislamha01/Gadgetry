@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import GadgetCard from "./GadgetCard";
-import { IoIosSearch } from "react-icons/io";
 import Categorization from "./Categorization";
 import BrandCategorization from "./BrandCategorization";
+import PriceCategorization from "./PriceCategorization";
+import SearchGadget from "./SearchGadget";
 
 const Gadgets = () => {
 
@@ -13,8 +14,13 @@ const Gadgets = () => {
     const [search, setSearch] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('All')
     const [selectedBrand, setSelectedBrand] = useState('All')
+    const [priceRange, setPriceRange] = useState([0, Infinity])
+    const lowerPriceRange = priceRange[0]
+    const upperPriceRange = priceRange[1]
+
     console.log(search, selectedCategory, selectedBrand);
     console.log('selectedBrand is ', selectedBrand);
+    console.log('price range is ', priceRange);
 
     useEffect(() => {
         axios.get(`${serverUrl}/gadgets`)
@@ -29,14 +35,7 @@ const Gadgets = () => {
 
     // console.log(gadgets);
 
-    const handleSearch = (e) => {
-        e.preventDefault()
-        const word = e.target.keyword.value
-        // console.log(word, word !== null);
-        if (word !== null) {
-            setSearch(word)
-        }
-    }
+
 
 
     // categorization function
@@ -50,18 +49,32 @@ const Gadgets = () => {
     console.log(categorizedGadgets);
 
 
+
     // categorization with brand name
-    let brandedGadgets = []
+
+    let brandedCategorizedGadgets = []
     if (selectedBrand === 'All') {
-        brandedGadgets = categorizedGadgets
+        brandedCategorizedGadgets = categorizedGadgets
     } else {
-        brandedGadgets = categorizedGadgets?.filter(gadget => gadget.brand.includes(selectedBrand))
+        brandedCategorizedGadgets = categorizedGadgets?.filter(gadget => gadget.brand.includes(selectedBrand))
     }
 
-    // making an array of the brand name of the categorized gadgets
+
+
+    // making an array of the brand name of the categorized gadgets so that we can use these names to filter with brand name
     let categorizedGadgetsBrands = []
     categorizedGadgets?.map(gadgets => categorizedGadgetsBrands.push(gadgets.brand))
     // console.log(categorizedGadgetsBrands);
+
+
+
+    // categorizing with price range
+    const priceAndBrandedCategorizedGadgets = brandedCategorizedGadgets?.filter(items => {
+        return items.price >= lowerPriceRange && items.price <= upperPriceRange
+
+    })
+    console.log(priceAndBrandedCategorizedGadgets);
+
 
 
     return (
@@ -69,20 +82,10 @@ const Gadgets = () => {
             <h1 className="heading">Gadgets</h1>
 
 
-            {/* search */}
-            <form onSubmit={handleSearch} className="relative w-[300px]">
-                <input
-                    // {...register('search')}
-                    onChange={(e) => setSearch(e.target.value)}
-                    type="text"
-                    name="keyword"
-                    className="py-2 px-4 bg-slate-100 rounded-full w-full outline-none"
-                    placeholder="Search By Product Name..."
-                />
-                <button type="submit" className="absolute top-[0%] right-0 rounded-r-full hover:rounded-full px-2 h-full w-[40px] cursor-pointer bg-slate-300 hover:text-red-600 hover:bg-slate-900 transition-all duration-1000 flex items-center justify-center">
-                    <IoIosSearch className=" font-bold text-lg" />
-                </button>
-            </form>
+            <SearchGadget
+                setSearch={setSearch}
+            ></SearchGadget>
+
 
             {/* menues */}
             <div className="flex flex-col md:flex-row  items-center">
@@ -97,12 +100,15 @@ const Gadgets = () => {
                     categorizedGadgetsBrands={categorizedGadgetsBrands}
                 ></BrandCategorization>
 
+                <PriceCategorization
+                    setPriceRange={setPriceRange}
+                ></PriceCategorization>
 
             </div>
 
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {
-                    brandedGadgets?.filter(gadget => {
+                    priceAndBrandedCategorizedGadgets?.filter(gadget => {
                         return (
                             search.toLowerCase() === '' ? gadget : gadget.name.toLowerCase().includes(search.toLocaleLowerCase())
                         )

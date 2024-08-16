@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import Select from 'react-select'
 
-const BrandCategorization = ({selectedBrand, setSelectedBrand, categorizedGadgetsBrands }) => {
+const BrandCategorization = ({ selectedBrand, setSelectedBrand, categorizedGadgetsBrands }) => {
 
     console.log(selectedBrand);
 
     // brandsArr is a array with unique elements. in case of duplicate elements it creates an array with elements that will not appear twice.
-    const brandsArr = [ ...new Set(categorizedGadgetsBrands)]
+    const brandsArr = [...new Set(categorizedGadgetsBrands)]
 
     const selectedOptions = brandsArr?.map(brand => {
         return { value: brand, label: brand }
@@ -22,7 +22,6 @@ const BrandCategorization = ({selectedBrand, setSelectedBrand, categorizedGadget
     }
 
     return (
-        
         options &&
         <Select
             options={options}
