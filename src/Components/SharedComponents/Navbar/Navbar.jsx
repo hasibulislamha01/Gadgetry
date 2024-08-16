@@ -26,8 +26,8 @@ const Navbar = () => {
             inactiveClass: ' text-gray-400'
         },
         {
-            title: 'Blogs',
-            link: '/blogs',
+            title: 'Gadgets',
+            link: '/gadgets',
             activeClass: 'text-white',
             inactiveClass: 'text-gray-400'
         },

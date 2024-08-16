@@ -1,0 +1,203 @@
+[
+    {
+      "name": "Wireless Headphones",
+      "image": "https://www.shopz.com.bd/wp-content/uploads/2023/11/Beats-Studio-Pro-Wireless-Headphones.jpg",
+      "description": "High-quality wireless headphones with noise cancellation and 20 hours battery life.",
+      "price": 150.99,
+      "category": "Audio",
+      "brand": "SoundWave",
+      "ratings": 4.5,
+      "dateAdded": "2024-07-01T08:30:00Z"
+    },
+    {
+      "name": "4K Ultra HD Smart TV",
+      "image": "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_1100,f_auto,q_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/b41a7fde-dcc1-11ec-9f1b-2e0c91dc8f24.jpg",
+      "description": "55-inch 4K Ultra HD Smart TV with built-in streaming apps and voice control.",
+      "price": 599.99,
+      "category": "Electronics",
+      "brand": "VisionTech",
+      "ratings": 4.8,
+      "dateAdded": "2024-07-03T14:20:00Z"
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "image": "https://www.artis.in/cdn/shop/products/1_f5b3377c-c870-420f-bc6a-5cd4b3a5a7c7.jpg?v=1653639993",
+      "description": "Portable Bluetooth speaker with deep bass and water-resistant design.",
+      "price": 45.99,
+      "category": "Audio",
+      "brand": "SoundWave",
+      "ratings": 4.3,
+      "dateAdded": "2024-07-05T10:00:00Z"
+    },
+    {
+      "name": "Smartphone",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2302/gallery/levant-galaxy-s23-s911-sm-s911bzkcmea-534843958?$650_519_PNG$",
+      "description": "Latest 5G smartphone with 128GB storage and 48MP triple camera system.",
+      "price": 699.99,
+      "category": "Mobile",
+      "brand": "TechMobile",
+      "ratings": 4.7,
+      "dateAdded": "2024-07-07T16:45:00Z"
+    },
+    {
+      "name": "Gaming Laptop",
+      "image": "https://cdn.mos.cms.futurecdn.net/8VM9YwrqUUeTkLaQ2jVAUo-1200-80.jpg",
+      "description": "Powerful gaming laptop with RTX 3080 GPU, 16GB RAM, and 1TB SSD.",
+      "price": 1299.99,
+      "category": "Computers",
+      "brand": "GamerPro",
+      "ratings": 4.9,
+      "dateAdded": "2024-07-10T09:30:00Z"
+    },
+    {
+      "name": "Smartwatch",
+      "image": "https://www.gadstyle.com/wp-content/uploads/2024/04/boat-wave-hype-bluetooth-calling-smart-watch-4.webp",
+      "description": "Water-resistant smartwatch with heart rate monitor, GPS, and sleep tracking.",
+      "price": 199.99,
+      "category": "Wearables",
+      "brand": "WristTech",
+      "ratings": 4.6,
+      "dateAdded": "2024-07-12T11:15:00Z"
+    },
+    {
+      "name": "Digital Camera",
+      "image": "https://images.ctfassets.net/bht415zek091/38xGkvENINM6vUyTIGMSE1/383674c050fb44ebb077aaee27a8e657/Fujifilm_X10-web.jpg",
+      "description": "24MP digital camera with 4K video recording and 30x optical zoom.",
+      "price": 549.99,
+      "category": "Cameras",
+      "brand": "CaptureIt",
+      "ratings": 4.4,
+      "dateAdded": "2024-07-14T13:00:00Z"
+    },
+    {
+      "name": "Tablet",
+      "image": "https://economictimes.indiatimes.com/thumb/msid-103163598,width-1200,height-900,resizemode-4,imgsize-211668/6-best-8-inch-tablets-in-india.jpg?from=mdr",
+      "description": "10-inch tablet with 64GB storage, Wi-Fi, and 10-hour battery life.",
+      "price": 299.99,
+      "category": "Mobile",
+      "brand": "TechMobile",
+      "ratings": 4.2,
+      "dateAdded": "2024-07-17T15:30:00Z"
+    },
+    {
+      "name": "Wireless Mouse",
+      "image": "https://resource.logitechg.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/products/G309-Lightspeed-Gaming-Mouse/gallery/g309-lightspeed-wireless-mouse-black-gallery-1.png?v=1",
+      "description": "Ergonomic wireless mouse with customizable buttons and 2-year battery life.",
+      "price": 39.99,
+      "category": "Accessories",
+      "brand": "PeriTech",
+      "ratings": 4.1,
+      "dateAdded": "2024-07-19T12:00:00Z"
+    },
+    {
+      "name": "Fitness Tracker",
+      "image": "https://cdn.thewirecutter.com/wp-content/media/2023/11/fitness-tracker-2048px-5344.jpg?auto=webp&quality=75&crop=1.91:1&width=1200",
+      "description": "Lightweight fitness tracker with step counter, calorie tracker, and waterproof design.",
+      "price": 89.99,
+      "category": "Wearables",
+      "brand": "FitPlus",
+      "ratings": 4.3,
+      "dateAdded": "2024-07-21T09:45:00Z"
+    },
+    {
+      "name": "Noise Cancelling Earbuds",
+      "image": "https://cdn.mos.cms.futurecdn.net/A4e5rb4dmApxTvUxDfd2bW-320-80.jpg",
+      "description": "True wireless earbuds with active noise cancellation and 30 hours of battery life.",
+      "price": 149.99,
+      "category": "Audio",
+      "brand": "SoundWave",
+      "ratings": 4.5,
+      "dateAdded": "2024-07-24T14:10:00Z"
+    },
+    {
+      "name": "Smart Home Hub",
+      "image": "https://cdn.thewirecutter.com/wp-content/uploads/2019/02/smarthubs-lowres-1024-512.jpg?width=2048&quality=75&crop=2:1&auto=webp",
+      "description": "Central hub for controlling smart home devices with voice commands.",
+      "price": 99.99,
+      "category": "Home",
+      "brand": "HomeSmart",
+      "ratings": 4.7,
+      "dateAdded": "2024-07-26T10:30:00Z"
+    },
+    {
+      "name": "External Hard Drive",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2bBAFQ2GGbqNkrTL2DQDIsbMD3qRJn5tBSg&s",
+      "description": "1TB external hard drive with USB 3.0 connectivity and rugged design.",
+      "price": 79.99,
+      "category": "Storage",
+      "brand": "DataStore",
+      "ratings": 4.2,
+      "dateAdded": "2024-07-29T11:45:00Z"
+    },
+    {
+      "name": "Wireless Charger",
+      "image": "https://static-01.daraz.com.bd/p/bf38cb490c4df976ff69609ba5278b4a.jpg",
+      "description": "Fast wireless charger compatible with all Qi-enabled devices.",
+      "price": 29.99,
+      "category": "Accessories",
+      "brand": "ChargeIt",
+      "ratings": 4.4,
+      "dateAdded": "2024-07-31T13:50:00Z"
+    },
+    {
+      "name": "Electric Toothbrush",
+      "image": "https://images.ctfassets.net/cd8k8w3hw1x5/6qP9Aos4an6Rb3PwmQYFRb/eb2a7918132d3900dede0971a9114d32/electric-toothbrushes.jpg?w=3840&fm=webp&q=75",
+      "description": "Rechargeable electric toothbrush with multiple cleaning modes and timer.",
+      "price": 59.99,
+      "category": "Health",
+      "brand": "SmileBright",
+      "ratings": 4.6,
+      "dateAdded": "2024-08-02T08:30:00Z"
+    },
+    {
+      "name": "VR Headset",
+      "image": "https://i5.walmartimages.com/seo/Oculus-Quest-128GB-VR-Headset_43a7f582-63ed-4447-a2b2-40469b798f94_2.68a36a95313362add36073f6ff17d9d4.jpeg",
+      "description": "Immersive VR headset with motion tracking and 4K display.",
+      "price": 399.99,
+      "category": "Gaming",
+      "brand": "VirtualPlay",
+      "ratings": 4.7,
+      "dateAdded": "2024-08-04T17:00:00Z"
+    },
+    {
+      "name": "Smart Thermostat",
+      "image": "https://cdn.mos.cms.futurecdn.net/Ek2kyrb7BqbAZXepGvvVYL.jpg",
+      "description": "Wi-Fi enabled smart thermostat with energy-saving features and remote control.",
+      "price": 129.99,
+      "category": "Home",
+      "brand": "EcoTherm",
+      "ratings": 4.8,
+      "dateAdded": "2024-08-06T15:20:00Z"
+    },
+    {
+      "name": "Electric Scooter",
+      "image": "https://media.wired.com/photos/652814d9791dfe8bf2d75169/191:100/w_1280,c_limit/scooter-gear-3.-Front-3-4.jpg",
+      "description": "Foldable electric scooter with 20-mile range and 15 mph top speed.",
+      "price": 499.99,
+      "category": "Transport",
+      "brand": "E-Ride",
+      "ratings": 4.5,
+      "dateAdded": "2024-08-08T11:10:00Z"
+    },
+    {
+      "name": "Portable Projector",
+      "image": "https://cdn.thewirecutter.com/wp-content/media/2024/02/portableminiprojectors-2048px-0348.jpg",
+      "description": "Compact portable projector with 1080p resolution and built-in speakers.",
+      "price": 249.99,
+      "category": "Home",
+      "brand": "VisionTech",
+      "ratings": 4.6,
+      "dateAdded": "2024-08-10T14:55:00Z"
+    },
+    {
+      "name": "Gaming Keyboard",
+      "image": "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2022/04/rgb-lit-gaming-mechanical-keyboard.jpg",
+      "description": "Mechanical gaming keyboard with RGB lighting and programmable keys.",
+      "price": 89.99,
+      "category": "Accessories",
+      "brand": "GamerPro",
+      "ratings": 4.7,
+      "dateAdded": "2024-08-12T12:40:00Z"
+    }
+  ]
+  
