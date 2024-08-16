@@ -69,7 +69,7 @@ const Navbar = () => {
 
 
             {/* vertical navbar */}
-            <div className="sideNav hidden z-auto shadow-lg shadow-gray-400 w-[250px] h-screen fixed top-0 right-0  bg-slate-900 bg-opacity-85 backdrop-blur-lg  flex-col">
+            <div className="sideNav hidden z-50 shadow-lg shadow-gray-400 w-[250px] h-screen fixed top-0 right-0  bg-slate-900 bg-opacity-85 backdrop-blur-lg  flex-col">
 
                 {/* close icon */}
                 <svg onClick={hideSideBar} className="m-2 p-2 cursor-pointer rounded-full hover:bg-slate-800" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>

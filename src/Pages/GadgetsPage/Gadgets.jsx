@@ -88,7 +88,7 @@ const Gadgets = () => {
 
 
             {/* menues */}
-            <div className="flex flex-col md:flex-row  items-center">
+            <div className="mt-6 flex flex-col md:flex-row  items-center justify-center gap-4">
                 <Categorization
                     setSelectedCategory={setSelectedCategory}
                     setSelectedBrand={setSelectedBrand}
@@ -106,7 +106,7 @@ const Gadgets = () => {
 
             </div>
 
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="mx-auto px-1 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 place-items-center">
                 {
                     priceAndBrandedCategorizedGadgets?.filter(gadget => {
                         return (
