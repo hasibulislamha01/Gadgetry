@@ -4,7 +4,7 @@ import { HiShoppingCart } from "react-icons/hi";
 
 const GadgetCard = ({ gadget }) => {
 
-    console.log(gadget)
+    // console.log(gadget)
 
     return (
         <div className='flex flex-col w-[300px]  rounded-lg py-6 bg-slate-100'>
