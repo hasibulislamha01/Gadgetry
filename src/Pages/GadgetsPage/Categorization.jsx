@@ -1,7 +1,7 @@
 import Select from 'react-select'
 import PropTypes from 'prop-types'
 
-const Categorization = ({setSelectedCategory}) => {
+const Categorization = ({setSelectedCategory, setSelectedBrand}) => {
 
     const options = [
         { value: 'All', label: 'All Gadgets' },
@@ -25,6 +25,7 @@ const Categorization = ({setSelectedCategory}) => {
         const selected = option?.value
         // console.log('changing', option,  setSelectedCategory)
         setSelectedCategory(selected)
+        setSelectedBrand('All')
     }
 
     return (
@@ -39,6 +40,7 @@ const Categorization = ({setSelectedCategory}) => {
 
 
 Categorization.propTypes = {
-    setSelectedCategory: PropTypes.func
+    setSelectedCategory: PropTypes.func,
+    setSelectedBrand: PropTypes.func
 }
 export default Categorization;
