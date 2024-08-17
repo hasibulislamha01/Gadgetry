@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 
-const btnStyles = 'px-4 py-1 cursor-pointer rounded-lg font-semibold border'
+const btnStyles = 'px-4 py-1 cursor-pointer rounded-lg font-semibold border  transition-all duration-500'
 // const disabledStyle = 'px-4 py-1  cursor-default btn btn-disabled'
 
 const Pagination = ({ pages, setCurrentPage, currentPage }) => {
@@ -41,9 +41,9 @@ const Pagination = ({ pages, setCurrentPage, currentPage }) => {
                             <button
                                 onClick={() => setCurrentPage(page)}
                                 key={index}
-                                className={currentPage === page ? `text-rose-400 bg-slate-800  border-slate-800 hover:text-rose-300 ${btnStyles}`
+                                className={currentPage === page ? `text-rose-400 bg-slate-800  border-slate-800 hover:text-rose-300 hover:rounded-full ${btnStyles}`
                                     :
-                                    `text-slate-800 bg-slate-100 border-slate-800 hover:text-rose-500 hover:bg-rose-50  hover:border-rose-500 ${btnStyles}`}
+                                    `text-slate-800 bg-white hover:text-slate-800 hover:bg-rose-50  hover:border-slate-800 ${btnStyles}`}
                             >
                                 {page}
                             </button>

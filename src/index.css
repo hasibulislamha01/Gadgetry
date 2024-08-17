@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+.themeFont{
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.themeHeadingFont{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 500; */
+  font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +34,8 @@ body {
 }
 
 .heading {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
     font-size: 28px;
     text-align: center;
     font-weight: 600;

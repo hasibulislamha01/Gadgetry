@@ -24,11 +24,11 @@ const SearchGadget = ({setSearch}) => {
                     onChange={(e) => setSearch(e.target.value)}
                     type="text"
                     name="keyword"
-                    className="py-2 px-4 bg-slate-100 rounded-full w-full outline-none"
+                    className="py-2 px-4 bg-rose-100 text-slate-800 font-medium rounded-full w-full outline-none "
                     placeholder="Search By Product Name..."
                 />
-                <button type="submit" className="absolute top-[0%] right-0 rounded-r-full hover:rounded-full px-2 h-full w-[40px] cursor-pointer bg-slate-300 hover:text-[#fb7185] hover:bg-[#1e293b] transition-all duration-1000 flex items-center justify-center">
-                    <IoIosSearch className=" font-bold text-lg" />
+                <button type="submit" className="absolute top-[0%] right-0 rounded-r-full hover:rounded-full px-2 h-full w-[40px] md:w-[50px] cursor-pointer bg-slate-800 text-rose-400 hover:bg-[#1e293b] transition-all duration-1000 flex items-center justify-center">
+                <IoIosSearch className=" font-medium text-lg" size={25} />
                 </button>
             </form>
         </>
