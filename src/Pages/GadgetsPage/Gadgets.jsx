@@ -11,6 +11,7 @@ const Gadgets = () => {
 
     const [gadgets, setGadgets] = useState()
     const serverUrl = import.meta.env.VITE_serverLink
+    console.log(serverUrl);
 
     const [search, setSearch] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('All')

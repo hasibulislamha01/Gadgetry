@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 import app from "./firebase.config";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import axios from "axios";
 
 
 export const AuthContext = createContext(null)
@@ -16,33 +15,13 @@ const AuthProvider = ({ children }) => {
 
     // authentication state observer
     useEffect(() => {
-        onAuthStateChanged(auth, async (currentUser) => {
-            const loggedUser = { email: currentUser?.email || user?.email }
+        onAuthStateChanged(auth, (currentUser) => {
             if (currentUser) {
                 console.log('user in the auth state', currentUser)
                 setUser(currentUser)
                 setLoading(false)
 
-                // generating token
-                await axios.post('https://booknest-phi.vercel.app/jwt',
-                    loggedUser,
-                    { withCredentials: true }
-                )
-                    .then(response => {
-                        console.log('token', response.data)
-                    }).catch(error => {
-                        console.error(error.message)
-                    })
-
             } else {
-                axios.post('https://booknest-phi.vercel.app/logout',
-                    loggedUser,
-                    { withCredentials: true })
-                    .then(response => {
-                        console.log('token clear', response.data)
-                    }).catch(error => {
-                        console.error(error.message)
-                    })
                 setUser(null)
                 setLoading(false)
             }
