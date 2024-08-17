@@ -22,6 +22,7 @@ const Gadgets = () => {
     const upperPriceRange = priceRange[1]
 
     console.log(search, selectedCategory, selectedBrand);
+    console.log(setPostsPerPage);
     // console.log('selectedBrand is ', selectedBrand);
     // console.log('price range is ', priceRange);
 
@@ -92,7 +93,7 @@ const Gadgets = () => {
 
 
     return (
-        <div className="px-1 md:px-2 min-h-screen lg:pt-6 pt-4">
+        <div className="container mx-auto px-1 md:px-2 min-h-screen pt-20">
             <h1 className="heading">Gadgets</h1>
 
 

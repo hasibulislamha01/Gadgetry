@@ -1,7 +1,7 @@
 import Select from 'react-select'
 import PropTypes from 'prop-types'
 
-const rose = '#fb7185'
+const rose = '#fda4af'
 const slate = '#1e293b'
 const liteSlate = '#e2e8f0'
 const gray = '#334155'

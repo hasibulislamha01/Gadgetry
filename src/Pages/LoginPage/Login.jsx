@@ -36,7 +36,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="pt-2 lg:pt-12">
+        <div className="container mx-auto min-h-screen flex flex-col items-center justify-center pt-20 lg:pt-0">
             <h1 className="heading">Login</h1>
 
             {

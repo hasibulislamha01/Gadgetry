@@ -35,7 +35,7 @@ const Register = () => {
     }
 
     return (
-        <div className="pt-2 lg:pt-12">
+        <div className="container mx-auto min-h-screen flex flex-col items-center justify-center">
             <h1 className="heading">Register</h1>
 
             {

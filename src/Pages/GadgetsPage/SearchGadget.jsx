@@ -18,7 +18,7 @@ const SearchGadget = ({setSearch}) => {
     return (
         <>
             {/* search */}
-            <form onSubmit={handleSearch} className="mt-6 relative w-[250px] md:w-[450px] mx-auto">
+            <form onSubmit={handleSearch} className="mt-6 z-10 relative w-[250px] md:w-[450px] mx-auto">
                 <input
                     // {...register('search')}
                     onChange={(e) => setSearch(e.target.value)}

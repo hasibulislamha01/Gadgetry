@@ -33,6 +33,11 @@ body {
     /* border: 1px solid tomato; */
 }
 
+.banner{
+    /* background: linear-gradient(135deg, #98FF98, #2A3439); */
+    background: linear-gradient(135deg, #50C878, #2F4F4F);
+}
+
 .heading {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;

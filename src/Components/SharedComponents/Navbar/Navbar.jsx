@@ -46,12 +46,12 @@ const Navbar = () => {
 
 
     return (
-        <div className="themeHeadingFont">
+        <div className="themeHeadingFont fixed w-full z-50">
 
             {/* horizontal navbar */}
             <div className="bg-slate-800 px-6 sticky">
                 <div className="container mx-auto flex items-center justify-end space-x-6 h-[60px]">
-                    <NavLink to='/' className='text-xl text-rose-400 mr-auto'>Gadgetry</NavLink>
+                    <NavLink to='/' className='text-xl text-rose-300 mr-auto'>Gadgetry</NavLink>
                     {
                         navigationMenues?.map(item =>
                             <NavLink
@@ -68,7 +68,7 @@ const Navbar = () => {
 
 
             {/* vertical navbar */}
-            <div className="sideNav hidden z-50 shadow-lg shadow-gray-400 w-[250px] h-screen fixed top-0 right-0  bg-slate-900 bg-opacity-85 backdrop-blur-lg  flex-col">
+            <div className="sideNav hidden shadow-lg shadow-gray-400 w-[250px] h-screen fixed top-0 right-0  bg-slate-900 bg-opacity-85 backdrop-blur-lg  flex-col">
 
                 {/* close icon */}
                 <svg onClick={hideSideBar} className="m-2 p-2 cursor-pointer rounded-full hover:bg-slate-800" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
