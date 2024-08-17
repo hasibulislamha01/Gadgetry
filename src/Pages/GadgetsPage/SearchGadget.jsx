@@ -1,6 +1,8 @@
 import { IoIosSearch } from "react-icons/io";
 import PropTypes from 'prop-types'
 
+
+
 const SearchGadget = ({setSearch}) => {
 
     const handleSearch = (e) => {
@@ -25,7 +27,7 @@ const SearchGadget = ({setSearch}) => {
                     className="py-2 px-4 bg-slate-100 rounded-full w-full outline-none"
                     placeholder="Search By Product Name..."
                 />
-                <button type="submit" className="absolute top-[0%] right-0 rounded-r-full hover:rounded-full px-2 h-full w-[40px] cursor-pointer bg-slate-300 hover:text-red-600 hover:bg-slate-900 transition-all duration-1000 flex items-center justify-center">
+                <button type="submit" className="absolute top-[0%] right-0 rounded-r-full hover:rounded-full px-2 h-full w-[40px] cursor-pointer bg-slate-300 hover:text-[#fb7185] hover:bg-[#1e293b] transition-all duration-1000 flex items-center justify-center">
                     <IoIosSearch className=" font-bold text-lg" />
                 </button>
             </form>

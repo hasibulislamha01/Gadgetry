@@ -5,6 +5,7 @@ import Categorization from "./Categorization";
 import BrandCategorization from "./BrandCategorization";
 import PriceCategorization from "./PriceCategorization";
 import SearchGadget from "./SearchGadget";
+import Pagination from "./Pagination";
 
 const Gadgets = () => {
 
@@ -15,18 +16,20 @@ const Gadgets = () => {
     const [selectedCategory, setSelectedCategory] = useState('All')
     const [selectedBrand, setSelectedBrand] = useState('All')
     const [priceRange, setPriceRange] = useState([0, Infinity])
+    const [currentPage, setCurrentPage] = useState(1)
+    const [postsPerPage, setPostsPerPage] = useState(9)
     const lowerPriceRange = priceRange[0]
     const upperPriceRange = priceRange[1]
 
     console.log(search, selectedCategory, selectedBrand);
-    console.log('selectedBrand is ', selectedBrand);
-    console.log('price range is ', priceRange);
+    // console.log('selectedBrand is ', selectedBrand);
+    // console.log('price range is ', priceRange);
 
     useEffect(() => {
         axios.get(`${serverUrl}/gadgets`)
             .then(response => {
                 // console.log(response)
-                setGadgets(response.data)
+                setGadgets(response?.data)
             })
             .catch(error => {
                 console.error(error.message)
@@ -77,6 +80,17 @@ const Gadgets = () => {
 
 
 
+
+    // pagination logics
+    const totalItems = priceAndBrandedCategorizedGadgets?.length
+    const pageNo = Math.ceil(totalItems / postsPerPage)
+    const lastPostIndex = postsPerPage * currentPage - 1
+    const firstPostIndex = lastPostIndex - postsPerPage + 1
+    // console.log('first idx:', firstPostIndex, 'last idx:', lastPostIndex);
+    const displayableGadgets = priceAndBrandedCategorizedGadgets?.slice(firstPostIndex, lastPostIndex + 1)
+    // console.log('length', pageNo);
+
+
     return (
         <div className="px-1 md:px-2 min-h-screen lg:pt-6 pt-4">
             <h1 className="heading">Gadgets</h1>
@@ -108,7 +122,7 @@ const Gadgets = () => {
 
             <div className="mx-auto px-1 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 place-items-center">
                 {
-                    priceAndBrandedCategorizedGadgets?.filter(gadget => {
+                    displayableGadgets?.filter(gadget => {
                         return (
                             search.toLowerCase() === '' ? gadget : gadget.name.toLowerCase().includes(search.toLocaleLowerCase())
                         )
@@ -121,6 +135,12 @@ const Gadgets = () => {
                         ))
                 }
             </div>
+
+            <Pagination
+                pages={pageNo}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+            ></Pagination>
         </div>
     );
 };
