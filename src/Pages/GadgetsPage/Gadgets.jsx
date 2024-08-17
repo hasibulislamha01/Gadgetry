@@ -11,7 +11,8 @@ const Gadgets = () => {
 
     const [gadgets, setGadgets] = useState()
     const serverUrl = import.meta.env.VITE_serverLink
-    console.log(serverUrl);
+    const url = `${serverUrl}/gadgets`
+    console.log(url);
 
     const [search, setSearch] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('All')
@@ -28,7 +29,7 @@ const Gadgets = () => {
     // console.log('price range is ', priceRange);
 
     useEffect(() => {
-        axios.get(`${serverUrl}/gadgets`)
+        axios.get(url)
             .then(response => {
                 // console.log(response)
                 setGadgets(response?.data)
@@ -36,7 +37,7 @@ const Gadgets = () => {
             .catch(error => {
                 console.error(error.message)
             })
-    }, [serverUrl])
+    }, [url])
 
     // console.log(gadgets);
 
