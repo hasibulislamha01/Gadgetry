@@ -28,9 +28,9 @@ const Gadgets = () => {
     // console.log('selectedBrand is ', selectedBrand);
     // console.log('price range is ', priceRange);
 
-    // const serverUrl = import.meta.env.VITE_serverLink
-    const localServer = import.meta.env.VITE_LocalServerLink
-    const url = `${localServer}/things?page=${currentPage}`
+    const serverUrl = import.meta.env.VITE_serverLink
+    // const localServer = import.meta.env.VITE_LocalServerLink
+    const url = `${serverUrl}/things?page=${currentPage}`
     // console.log(url, serverUrl);
 
     useEffect(() => {
