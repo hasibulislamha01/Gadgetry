@@ -11,6 +11,7 @@ import AuthProvider from './Components/AuthComponents/AuthProvider';
 import Login from './Pages/LoginPage/Login';
 import Register from './Pages/RegisterPage/Register';
 import Gadgets from './Pages/GadgetsPage/Gadgets';
+import ValidateLogin from './Components/ValidateLogin';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/gadgets",
-        element: <Gadgets></Gadgets>
+        element:
+          <ValidateLogin>
+            <Gadgets></Gadgets>
+          </ValidateLogin>
       },
     ]
   },

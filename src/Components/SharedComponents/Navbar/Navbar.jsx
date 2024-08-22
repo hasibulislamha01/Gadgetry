@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom";
 import hamburger from '/hamburger.svg'
+import useAuth from "../../../CustomHooks/useAuth";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+
+    const { user, logoutUser } = useAuth()
 
     const openSideNav = () => {
         const sideNav = document.querySelector('.sideNav')
@@ -17,7 +21,7 @@ const Navbar = () => {
 
 
     const navigationMenues = [
-       
+
         {
             title: 'Home',
             link: '/',
@@ -30,19 +34,51 @@ const Navbar = () => {
             activeClass: 'text-rose-300',
             inactiveClass: 'text-gray-400'
         },
+
+    ]
+
+    const authLinks = [
         {
             title: 'Login',
             link: '/login',
-            activeClass: 'text-rose-300',
-            inactiveClass: 'text-gray-400'
+            activeClass: `${'text-rose-300'}`,
+            inactiveClass: `${'text-gray-400'}`
         },
         {
             title: 'Register',
             link: '/register',
-            activeClass: 'text-rose-300',
-            inactiveClass: 'text-gray-400'
-        },
+            activeClass: `${'text-rose-300'}`,
+            inactiveClass: `${'text-gray-400'}`
+        }
     ]
+
+    const handleLogout = () => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "We prefer to stay in touch",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#2F4F4F",
+            confirmButtonText: "Logout"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                logoutUser()
+                    .then(() =>
+                        Swal.fire({
+                            title: "Logged out",
+                            text: "You are logged out!",
+                            icon: "success"
+                        })
+                    )
+                    .catch(error => {
+                        console.error(error?.message)
+                    })
+
+            }
+        });
+
+    }
 
 
     return (
@@ -60,6 +96,18 @@ const Navbar = () => {
                                 className={({ isActive }) => isActive ? `${item.activeClass} md:text-lg hidden md:inline-flex` : `${item.inactiveClass} md:text-lg hidden md:inline-flex`}
                             >{item.title}</NavLink>
                         )
+
+                    }
+                    {
+                        user ? <button onClick={handleLogout} className="btn btn-sm bg-slate-500 border-none text-white hover:bg-slate-700">Logout</button>
+                            :
+                            authLinks?.map(item =>
+                                <NavLink
+                                    key={item?.link}
+                                    to={item.link}
+                                    className={({ isActive }) => isActive ? `${item.activeClass} md:text-lg hidden md:inline-flex` : `${item.inactiveClass} md:text-lg hidden md:inline-flex`}
+                                >{item.title}</NavLink>
+                            )
                     }
                     <img className="md:hidden" onClick={openSideNav} src={hamburger} alt="" />
 

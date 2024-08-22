@@ -76,7 +76,7 @@ const Sorting = ({ setPriceOrder, setDateOrder }) => {
 
 
     return (
-        <div className='flex items-center justify-center mt-4 gap-4'>
+        <div className='flex flex-col md:flex-row items-center justify-center mt-4 gap-4'>
 
             <Select
                 placeholder='Sort by'

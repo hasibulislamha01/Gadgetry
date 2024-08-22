@@ -59,7 +59,7 @@ const Gadgets = () => {
         categorizedGadgets = gadgets?.filter(gadget => gadget.category.includes(selectedCategory))
     }
 
-    console.log(categorizedGadgets);
+    // console.log(categorizedGadgets);
 
 
 
@@ -86,7 +86,7 @@ const Gadgets = () => {
         return items.price >= lowerPriceRange && items.price <= upperPriceRange
 
     })
-    console.log(priceAndBrandedCategorizedGadgets);
+    // console.log(priceAndBrandedCategorizedGadgets);
 
 
 
@@ -114,7 +114,7 @@ const Gadgets = () => {
     }
 
 
-    console.log('Price Order:', priceOrder, '   date Order: ', dateOrder);
+    // console.log('Price Order:', priceOrder, '   date Order: ', dateOrder);
 
     return (
         <div className="container mx-auto px-1 md:px-2 min-h-screen pt-20">

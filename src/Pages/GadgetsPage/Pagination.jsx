@@ -19,7 +19,7 @@ const Pagination = ({ pages, setCurrentPage, currentPage }) => {
 
 
     return (
-        <div className='my-12  bg-slate-200 rounded-full flex items-center   justify-center gap-6'>
+        <div className='my-12  bg-slate-200 px-4 md:px-0 rounded-xl md:rounded-full flex items-center flex-wrap  justify-center gap-6'>
 
             <button
                 id='prev-btn'
@@ -28,7 +28,7 @@ const Pagination = ({ pages, setCurrentPage, currentPage }) => {
                 <GoArrowLeft   size={20} />
             </button>
 
-            <div className="flex items-center justify-center gap-6 py-3">
+            <div className="flex items-center justify-center gap-6 py-3 flex-wrap">
                 {
                     pagesArr?.map((page, index) => {
                         return (

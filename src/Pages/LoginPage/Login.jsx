@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../CustomHooks/useAuth";
 import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
 
-    const {loginUser} = useAuth()
+    const { loginUser, loginWithGoogle } = useAuth()
     const { register, handleSubmit, formState: { errors } } = useForm()
     const navigate = useNavigate()
+    const location = useLocation()
 
     const [firebaseErr, setFirebaseErr] = useState(null)
 
-    
-    
+
+
     const handleLogin = (data) => {
 
         setFirebaseErr(null)
@@ -28,15 +31,43 @@ const Login = () => {
                         text: "You have logged in!",
                         icon: "success"
                     });
-                    navigate('/')
+                    if (location?.state) {
+                        navigate(location.state)
+                    } else {
+                        navigate('/')
+                    }
                 }
             }).catch(err => {
                 console.error(err.message)
                 setFirebaseErr(err.message)
             })
     }
+
+
+    // google login
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogleLogin = () => {
+        loginWithGoogle(googleProvider)
+            .then(result => {
+                if (result?.user) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "You have logged in!",
+                        icon: "success"
+                    });
+                    if (location?.state) {
+                        navigate(location.state)
+                    } else {
+                        navigate('/')
+                    }
+                }
+            }).catch(error => {
+                console.error(error?.message)
+                setFirebaseErr(error?.message)
+            })
+    }
     return (
-        <div className="container mx-auto min-h-screen flex flex-col items-center justify-center pt-20 lg:pt-0">
+        <div className="container mx-auto min-h-screen flex flex-col items-center justify-center pt-20 lg:pt-20">
             <h1 className="heading">Login</h1>
 
             {
@@ -73,6 +104,18 @@ const Login = () => {
 
                 <button type="submit" className="btn btn-outline w-[220px]">Login</button>
             </form>
+            <div className="mt-6  flex flex-col items-center justify-center gap-4">
+                <h1 className="text-center">Login with</h1>
+                <FcGoogle
+                    onClick={handleGoogleLogin}
+                    className="cursor-pointer"
+                    size={30}
+                />
+                <div className="flex items-center gap-4">
+                    <h5>New to Gadgetry!</h5>
+                    <Link to='/register' className="text-rose-500">Sign up</Link>
+                </div>
+            </div>
         </div>
     );
 };
