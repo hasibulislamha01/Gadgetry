@@ -6,20 +6,20 @@ import BrandCategorization from "./BrandCategorization";
 import PriceCategorization from "./PriceCategorization";
 import SearchGadget from "./SearchGadget";
 import Pagination from "./Pagination";
+import Sorting from "./Sorting";
 
 const Gadgets = () => {
 
     const [gadgets, setGadgets] = useState()
-    const serverUrl = import.meta.env.VITE_serverLink
-    const url = `${serverUrl}/gadgets`
-    console.log(url);
-
     const [search, setSearch] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('All')
     const [selectedBrand, setSelectedBrand] = useState('All')
     const [priceRange, setPriceRange] = useState([0, Infinity])
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage, setPostsPerPage] = useState(9)
+    const [totalItems, setTotalItems] = useState(9)
+    const [priceOrder, setPriceOrder] = useState('asc')
+    const [dateOrder, setDateOrder] = useState('new')
     const lowerPriceRange = priceRange[0]
     const upperPriceRange = priceRange[1]
 
@@ -28,11 +28,18 @@ const Gadgets = () => {
     // console.log('selectedBrand is ', selectedBrand);
     // console.log('price range is ', priceRange);
 
+    // const serverUrl = import.meta.env.VITE_serverLink
+    const localServer = import.meta.env.VITE_LocalServerLink
+    const url = `${localServer}/things?page=${currentPage}`
+    // console.log(url, serverUrl);
+
     useEffect(() => {
         axios.get(url)
             .then(response => {
                 // console.log(response)
-                setGadgets(response?.data)
+                setGadgets(response?.data.pagedItems)
+                setTotalItems(response?.data.noOfItems)
+                console.log('items length: ', response?.data.noOfItems);
             })
             .catch(error => {
                 console.error(error.message)
@@ -58,7 +65,7 @@ const Gadgets = () => {
 
     // categorization with brand name
 
-    let brandedCategorizedGadgets = []
+    let brandedCategorizedGadgets = categorizedGadgets
     if (selectedBrand === 'All') {
         brandedCategorizedGadgets = categorizedGadgets
     } else {
@@ -74,7 +81,7 @@ const Gadgets = () => {
 
 
 
-    // categorizing with price range
+    // categorizing with price
     const priceAndBrandedCategorizedGadgets = brandedCategorizedGadgets?.filter(items => {
         return items.price >= lowerPriceRange && items.price <= upperPriceRange
 
@@ -85,14 +92,29 @@ const Gadgets = () => {
 
 
     // pagination logics
-    const totalItems = priceAndBrandedCategorizedGadgets?.length
-    const pageNo = Math.ceil(totalItems / postsPerPage)
-    const lastPostIndex = postsPerPage * currentPage - 1
-    const firstPostIndex = lastPostIndex - postsPerPage + 1
-    // console.log('first idx:', firstPostIndex, 'last idx:', lastPostIndex);
-    const displayableGadgets = priceAndBrandedCategorizedGadgets?.slice(firstPostIndex, lastPostIndex + 1)
-    // console.log('length', pageNo);
+    const noOfPages = Math.ceil(totalItems / postsPerPage)
 
+
+    // price sorting logics
+    let priceSortedData = priceAndBrandedCategorizedGadgets
+    if (priceOrder === 'asc') {
+         priceSortedData = priceAndBrandedCategorizedGadgets?.sort((a, b) => a.price - b.price)
+    } else if (priceOrder === 'dsc') {
+         priceSortedData = priceAndBrandedCategorizedGadgets?.sort((a, b) => b.price - a.price)
+    }
+
+
+
+    // date sorting logics
+    let dateSortedData = priceSortedData
+    if (dateOrder === 'new') {
+         dateSortedData = priceSortedData?.sort((a, b) => new Date(a.dateAdded) - new Date(b.dateAdded))
+    } else if (dateOrder === 'old') {
+         dateSortedData = priceSortedData?.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))
+    }
+
+
+    console.log('Price Order:', priceOrder, '   date Order: ', dateOrder);
 
     return (
         <div className="container mx-auto px-1 md:px-2 min-h-screen pt-20">
@@ -107,6 +129,7 @@ const Gadgets = () => {
             {/* menues */}
             <div className="mt-6 flex flex-col md:flex-row  items-center justify-center gap-4">
                 <Categorization
+                    gadgets={gadgets}
                     setSelectedCategory={setSelectedCategory}
                     setSelectedBrand={setSelectedBrand}
                 ></Categorization>
@@ -123,9 +146,18 @@ const Gadgets = () => {
 
             </div>
 
+
+            {/* sorting */}
+            <div>
+                <Sorting
+                    setPriceOrder={setPriceOrder}
+                    setDateOrder={setDateOrder}
+                ></Sorting>
+            </div>
+
             <div className="mx-auto px-1 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 place-items-center">
                 {
-                    displayableGadgets?.filter(gadget => {
+                    dateSortedData?.filter(gadget => {
                         return (
                             search.toLowerCase() === '' ? gadget : gadget.name.toLowerCase().includes(search.toLocaleLowerCase())
                         )
@@ -140,7 +172,7 @@ const Gadgets = () => {
             </div>
 
             <Pagination
-                pages={pageNo}
+                pages={noOfPages}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
             ></Pagination>

@@ -198,6 +198,211 @@
       "brand": "GamerPro",
       "ratings": 4.7,
       "dateAdded": "2024-08-12T12:40:00Z"
+    },
+
+
+    {
+      "name": "Streaming Webcam",
+      "image": "https://resource.logitech.com/content/dam/logitech/en/products/webcams/streamcam/gallery/streamcam-gallery-1-graphite.png",
+      "description": "1080p HD webcam with auto-focus and built-in microphone.",
+      "price": 59.99,
+      "category": "Computers",
+      "brand": "StreamLine",
+      "ratings": 4.4,
+      "dateAdded": "2024-08-14T08:50:00Z"
+    },
+    {
+      "name": "Bluetooth Keyboard",
+      "image": "https://techlink.com.bd/wp-content/uploads/2024/02/Logitech-K380S-Pebble-Keys-2-Multi-Device-Bluetooth-Keyboard.jpg",
+      "description": "Slim Bluetooth keyboard with multi-device connectivity and long battery life.",
+      "price": 39.99,
+      "category": "Accessories",
+      "brand": "TypeEase",
+      "ratings": 4.3,
+      "dateAdded": "2024-08-15T10:15:00Z"
+    },
+    {
+      "name": "Noise Cancelling Headphones",
+      "image": "https://www.gadstyle.com/wp-content/uploads/2023/11/beats-studio-pro-wireless-noise-cancelling-headphones-2.webp",
+      "description": "Over-ear headphones with active noise cancellation and 30 hours battery life.",
+      "price": 179.99,
+      "category": "Audio",
+      "brand": "SilentWave",
+      "ratings": 4.7,
+      "dateAdded": "2024-08-16T14:30:00Z"
+    },
+    {
+      "name": "Smart Light Bulb",
+      "image": "https://media.takealot.com/covers_images/42d0c92891ef419db8e82db8c41b4d77/s-fb.file",
+      "description": "Wi-Fi enabled smart light bulb with color-changing features and voice control.",
+      "price": 19.99,
+      "category": "Home",
+      "brand": "BrightLife",
+      "ratings": 4.5,
+      "dateAdded": "2024-08-17T09:45:00Z"
+    },
+    {
+      "name": "Portable SSD",
+      "image": "https://hocotech.com/wp-content/uploads/2020/02/hoco-ud7-extreme-speed-portable-ssd-cable.jpg",
+      "description": "500GB portable SSD with USB-C connectivity and shock-resistant design.",
+      "price": 109.99,
+      "category": "Storage",
+      "brand": "DataSpeed",
+      "ratings": 4.6,
+      "dateAdded": "2024-08-18T12:10:00Z"
+    },
+    {
+      "name": "Wireless Earbuds",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmFgY_e-pwSeA5zA9q9V34Y3H4Z3PmtI9ww&s",
+      "description": "True wireless earbuds with touch controls and wireless charging case.",
+      "price": 129.99,
+      "category": "Audio",
+      "brand": "EarTech",
+      "ratings": 4.4,
+      "dateAdded": "2024-08-19T15:00:00Z"
+    },
+    {
+      "name": "UltraWide Monitor",
+      "image": "https://www.lg.com/my/images/monitors/md06151216/gallery/1100_05.jpg",
+      "description": "34-inch UltraWide monitor with 100Hz refresh rate and curved display.",
+      "price": 499.99,
+      "category": "Monitors",
+      "brand": "VisionTech",
+      "ratings": 4.8,
+      "dateAdded": "2024-08-20T17:20:00Z"
+    },
+    {
+      "name": "Smart Doorbell",
+      "image": "https://cdn.thewirecutter.com/wp-content/media/2023/09/smart-doorbell-camera-2048px-0033.jpg?auto=webp&quality=75&width=1024",
+      "description": "Wi-Fi enabled video doorbell with two-way audio and motion detection.",
+      "price": 149.99,
+      "category": "Home",
+      "brand": "SafeHome",
+      "ratings": 4.6,
+      "dateAdded": "2024-08-21T18:00:00Z"
+    },
+    {
+      "name": "Action Camera",
+      "image": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/dji/osmo-action-3-standard-combo/osmo-action-3-standard-combo-01-500x500.webp",
+      "description": "4K action camera with waterproof housing and image stabilization.",
+      "price": 299.99,
+      "category": "Cameras",
+      "brand": "AdventureCam",
+      "ratings": 4.7,
+      "dateAdded": "2024-08-22T08:45:00Z"
+    },
+    {
+      "name": "Portable Bluetooth Speaker",
+      "image": "https://adminapi.applegadgetsbd.com/storage/media/large/Awei-Y886-60W-Powerful-Portable-Bluetooth-Speaker---12000mAh-Black-6692.jpg",
+      "description": "Compact Bluetooth speaker with deep bass and 12-hour battery life.",
+      "price": 49.99,
+      "category": "Audio",
+      "brand": "BassBoom",
+      "ratings": 4.3,
+      "dateAdded": "2024-08-23T13:30:00Z"
+    },
+    {
+      "name": "Smart Scale",
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/210114114323-best-smart-scale-wyze-scale-2.jpg?q=x_2,y_0,h_900,w_1601,c_crop/h_720,w_1280",
+      "description": "Bluetooth smart scale with body composition tracking and app integration.",
+      "price": 59.99,
+      "category": "Health",
+      "brand": "FitTrack",
+      "ratings": 4.5,
+      "dateAdded": "2024-08-24T11:20:00Z"
+    },
+    {
+      "name": "Wireless Charging Stand",
+      "image": "https://media.wired.com/photos/5dc5b461dea30b00096c6ca8/master/w_320%2Cc_limit/Gear-anker-wireless-charging-stand.jpg",
+      "description": "Fast wireless charging stand compatible with all Qi-enabled devices.",
+      "price": 39.99,
+      "category": "Accessories",
+      "brand": "ChargeEase",
+      "ratings": 4.2,
+      "dateAdded": "2024-08-25T15:10:00Z"
+    },
+
+
+    
+    {
+      "name": "Fitness Smartwatch",
+      "image": "https://i5.walmartimages.com/seo/Smart-Watch-Fits-for-Android-and-iPhone-EEEkit-Fitness-Health-Tracker-Waterproof-Smartwatch-for-Women-Men_819cb65b-8437-4eb3-aba1-ce6513dc8d58.312f5775b50ab18c130fe5a454149fa9.jpeg",
+      "description": "Fitness-focused smartwatch with heart rate monitor and GPS tracking.",
+      "price": 179.99,
+      "category": "Wearables",
+      "brand": "FitPlus",
+      "ratings": 4.7,
+      "dateAdded": "2024-08-26T10:45:00Z"
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "image": "https://www.ultratech.com.bd/image/cache/catalog/keyboard%20/e-yooso/k620-tkl/e-yooso-k620-tkl-mechanical-keyboard-with-single-backlit-500x500.jpg.webp",
+      "description": "Compact mechanical keyboard with tactile switches and customizable RGB lighting.",
+      "price": 89.99,
+      "category": "Accessories",
+      "brand": "TypePro",
+      "ratings": 4.6,
+      "dateAdded": "2024-08-27T16:30:00Z"
+    },
+    {
+      "name": "Gaming Controller",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAKjIFfeVF8thPVRhqL18wRs54yWWDiCFOYw&s",
+      "description": "Ergonomic gaming controller with customizable buttons and wireless connectivity.",
+      "price": 69.99,
+      "category": "Gaming",
+      "brand": "GameMaster",
+      "ratings": 4.5,
+      "dateAdded": "2024-08-28T14:00:00Z"
+    },
+    {
+      "name": "Laptop Cooling Pad",
+      "image": "https://www.ryans.com/storage/products/main/havit-f2083-black-laptop-cooling-11610865381.webp",
+      "description": "Laptop cooling pad with adjustable fan speed and ergonomic design.",
+      "price": 29.99,
+      "category": "Computers",
+      "brand": "CoolerTech",
+      "ratings": 4.3,
+      "dateAdded": "2024-08-29T13:00:00Z"
+    },
+    {
+      "name": "Smart Air Purifier",
+      "image": "https://www.syntech.co.za/wp-content/uploads/2022/06/BHR5860EU_wr_02.jpg",
+      "description": "Wi-Fi enabled air purifier with HEPA filter and real-time air quality monitoring.",
+      "price": 249.99,
+      "category": "Home",
+      "brand": "PureAir",
+      "ratings": 4.8,
+      "dateAdded": "2024-08-30T08:10:00Z"
+    },
+    {
+      "name": "Electric Kettle",
+      "image": "https://visionemporiumbd.com/images/detailed/126/Vision_E._Kettle_1.0L_VIS-EK-013_ROYAL_.jpg",
+      "description": "Stainless steel electric kettle with temperature control and fast boiling.",
+      "price": 59.99,
+      "category": "Home",
+      "brand": "QuickBoil",
+      "ratings": 4.6,
+      "dateAdded": "2024-08-31T09:15:00Z"
+    },
+    {
+      "name": "Tablet Stand",
+      "image": "https://www.shopz.com.bd/wp-content/uploads/2022/11/UGREEN-Dual-Rod-Support-Adjustable-Aluminum-Desktop-Tablet-Holder-1.jpg",
+      "description": "Adjustable tablet stand with anti-slip base and 360-degree rotation.",
+      "price": 24.99,
+      "category": "Accessories",
+      "brand": "HoldIt",
+      "ratings": 4.3,
+      "dateAdded": "2024-09-01T11:40:00Z"
+    },
+    {
+      "name": "Gaming Headset",
+      "image": "https://bhumika.com.bd/public/uploads/all/jmLN9HpJO1hiwDyaAv7lHNk6v5hiWk9kUBe48bZ6.jpg",
+      "description": "Over-ear gaming headset with surround sound and noise-canceling microphone.",
+      "price": 99.99,
+      "category": "Gaming",
+      "brand": "GameSound",
+      "ratings": 4.7,
+      "dateAdded": "2024-09-02T14:25:00Z"
     }
   ]
   

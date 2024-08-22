@@ -32,23 +32,22 @@ const customStyles = {
     }),
 };
 
-const Categorization = ({setSelectedCategory, setSelectedBrand}) => {
+const Categorization = ({gadgets=[], setSelectedCategory, setSelectedBrand}) => {
+
+
+    const categoriesOptionsArr = gadgets?.map(gadget => (
+        {
+            value: gadget?.category, 
+            label: gadget?.category
+        }
+    ))
 
     const options = [
         { value: 'All', label: 'All Gadgets' },
-        { value: 'Audio', label: 'Audio' },
-        { value: 'Home', label: 'Home' },
-        { value: 'Accessories', label: 'Accessories' },
-        { value: 'Electronics', label: 'Electronics' },
-        { value: 'Mobile', label: 'Mobile' },
-        { value: 'Cameras', label: 'Cameras' },
-        { value: 'Wearables', label: 'Wearables' },
-        { value: 'Storage', label: 'Storage' },
-        { value: 'Computers', label: 'Computers' },
-        { value: 'Transport', label: 'Transport' },
-        { value: 'Gaming', label: 'Gaming' },
-        { value: 'Health', label: 'Health' },
+        ...categoriesOptionsArr
     ]
+
+    // console.log(options);
 
     const defaultOption = { value: 'All', label: 'All Gadgets' }
 
@@ -72,7 +71,8 @@ const Categorization = ({setSelectedCategory, setSelectedBrand}) => {
 
 
 Categorization.propTypes = {
-    setSelectedCategory: PropTypes.func,
-    setSelectedBrand: PropTypes.func
+    gadgets: PropTypes.array,
+    setSelectedCategory: PropTypes.func.isRequired,
+    setSelectedBrand: PropTypes.func.isRequired
 }
 export default Categorization;
